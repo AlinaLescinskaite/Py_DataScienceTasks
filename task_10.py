@@ -18,4 +18,4 @@ if __name__ == '__main__':
             print("Enter a digit")
             continue
 
-    print(f"number: {abs(user_input)}")
+    print(f"Absolute value of the number: {abs(user_input)}")
