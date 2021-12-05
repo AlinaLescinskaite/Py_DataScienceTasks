@@ -7,7 +7,7 @@ calling the function.
 import inspect
 
 
-def func_name_args(function):
+def debug(function):
     def wrapper(*args, **kwargs):
         func_args = inspect.signature(function).bind(*args, **kwargs).arguments
         func_args_str = ", ".join(map("{0[0]}={0[1]!r}".format, func_args.items()))
@@ -16,7 +16,7 @@ def func_name_args(function):
     return wrapper
 
 
-@func_name_args
+@debug
 def func(a, b, c):
     return a + b * c
 
